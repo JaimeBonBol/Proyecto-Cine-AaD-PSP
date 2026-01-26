@@ -43,3 +43,7 @@ postgres-data/
 *.iml
 .vscode/
 .DS_Store
+
+### Configuración Local y Secretos ###
+docker-compose.yml
+src/main/resources/application.yml
