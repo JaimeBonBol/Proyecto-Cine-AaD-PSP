@@ -20,7 +20,7 @@ public class Entrada {
 
     private int asiento;
 
-    private EstadoEntrada estado;
+    private EstadoEntrada estado = EstadoEntrada.PENDIENTE;
     
     // N Entradas -> 1 Venta
     @ManyToOne
