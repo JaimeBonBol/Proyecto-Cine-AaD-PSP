@@ -1,17 +1,15 @@
 package com.dam2.cine.dto.response;
 
 import lombok.Data;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 @Data
 public class FuncionResponseDTO {
     private Long id;
-    private LocalDate fecha;
-    private LocalTime hora;
+    private LocalDateTime fechaHora;
     private Double precio;
     
-    // Resumen de la peli
+    // Estos siguen siendo necesarios porque la entidad tiene objetos y aquí queremos texto
     private String peliculaTitulo; 
     private String salaNombre;
 }

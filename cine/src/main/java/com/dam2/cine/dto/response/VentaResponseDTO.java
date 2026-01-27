@@ -7,11 +7,10 @@ import java.util.List;
 @Data
 public class VentaResponseDTO {
     private Long id;
-    private LocalDateTime fechaCompra;
+    private LocalDateTime fecha;
     private Double total;
     private String estado;
-    private String emailUsuario; // Para saber de quién es
+    private String emailUsuario;
     
-    // Lista de entradas generadas en esta venta
     private List<EntradaResponseDTO> entradas; 
 }

@@ -10,11 +10,12 @@ import java.util.List;
 public class PeliculaRequestDTO {
     @NotBlank(message = "El título es obligatorio")
     private String titulo;
-    
-    private String genero;
-    
+
     @Positive
     private int duracion;
+
+    @Positive
+    private int edadMinima;
 
     @NotNull(message = "Debes especificar el ID del director")
     private Long directorId; // Referencia por ID [cite: 375]

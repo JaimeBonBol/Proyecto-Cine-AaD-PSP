@@ -9,6 +9,7 @@ public class EntradaResponseDTO {
     private Long id;
     private int fila;
     private int asiento;
+    private String estado;
     
     // Datos útiles para imprimir en la entrada
     private String peliculaTitulo;

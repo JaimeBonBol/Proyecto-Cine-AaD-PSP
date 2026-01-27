@@ -7,9 +7,9 @@ import java.util.List;
 public class PeliculaResponseDTO {
     private Long id;
     private String titulo;
-    private String genero;
     private int duracion;
-    
+    private int edadMinima;
+
     // Aquí SÍ anidamos objetos (Response), porque estos ya son planos
     private DirectorResponseDTO director; 
     private List<ActorResponseDTO> actores; 
