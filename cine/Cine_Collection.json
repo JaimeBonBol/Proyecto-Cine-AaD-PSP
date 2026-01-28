@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "b6a8d7c4-5e3a-4f1b-9c2d-8e7f1a2b3c4d",
-		"name": "Cine API Project",
-		"description": "Colección completa para probar el backend del proyecto Cine (Spring Boot).",
+		"_postman_id": "cine-full-crud-id",
+		"name": "Cine API - CRUD COMPLETO (Todas las Entidades)",
+		"description": "Colección con las 5 operaciones (GET, GET ID, POST, PUT, DELETE) para las 9 entidades del proyecto.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -10,65 +10,33 @@
 			"name": "1. Roles",
 			"item": [
 				{
+					"name": "Listar Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/roles"
+					}
+				},
+				{
+					"name": "Obtener Rol (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/roles/1"
+					}
+				},
+				{
 					"name": "Crear Rol",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"ROLE_USER\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"ROLE_USER\"\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/roles",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"roles"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Listar Roles",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/roles",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"roles"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Obtener Rol por ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/roles/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"roles",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/roles"
+					}
 				},
 				{
 					"name": "Actualizar Rol",
@@ -77,43 +45,19 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"ROLE_ADMIN\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"ROLE_ADMIN\"\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/roles/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"roles",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/roles/1"
+					}
 				},
 				{
 					"name": "Eliminar Rol",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/roles/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"roles",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/roles/1"
+					}
 				}
 			]
 		},
@@ -121,65 +65,33 @@
 			"name": "2. Usuarios",
 			"item": [
 				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/usuarios"
+					}
+				},
+				{
+					"name": "Obtener Usuario (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/usuarios/1"
+					}
+				},
+				{
 					"name": "Crear Usuario",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"usuario@test.com\",\n    \"password\": \"123456\",\n    \"rolId\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"email\": \"pepe@cine.com\",\n  \"password\": \"1234\",\n  \"rolId\": 1\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/usuarios",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"usuarios"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Listar Usuarios",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/usuarios",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"usuarios"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Obtener Usuario por ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/usuarios/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"usuarios",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/usuarios"
+					}
 				},
 				{
 					"name": "Actualizar Usuario",
@@ -188,25 +100,19 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"usuario_update@test.com\",\n    \"password\": \"nueva_pass\",\n    \"rolId\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"email\": \"pepe_updated@cine.com\",\n  \"password\": \"newpass\",\n  \"rolId\": 1\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/usuarios/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"usuarios",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/usuarios/1"
+					}
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/usuarios/1"
+					}
 				}
 			]
 		},
@@ -214,47 +120,33 @@
 			"name": "3. Directores",
 			"item": [
 				{
+					"name": "Listar Directores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/directores"
+					}
+				},
+				{
+					"name": "Obtener Director (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/directores/1"
+					}
+				},
+				{
 					"name": "Crear Director",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Christopher Nolan\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"Christopher Nolan\"\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/directores",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"directores"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Listar Directores",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/directores",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"directores"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/directores"
+					}
 				},
 				{
 					"name": "Actualizar Director",
@@ -263,43 +155,19 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Christopher Nolan (Editado)\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"Quentin Tarantino\"\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/directores/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"directores",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/directores/1"
+					}
 				},
 				{
 					"name": "Eliminar Director",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/directores/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"directores",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/directores/1"
+					}
 				}
 			]
 		},
@@ -307,47 +175,54 @@
 			"name": "4. Actores",
 			"item": [
 				{
+					"name": "Listar Actores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/actores"
+					}
+				},
+				{
+					"name": "Obtener Actor (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/actores/1"
+					}
+				},
+				{
 					"name": "Crear Actor",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Leonardo DiCaprio\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"Brad Pitt\"\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/actores",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"actores"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/actores"
+					}
 				},
 				{
-					"name": "Listar Actores",
+					"name": "Actualizar Actor",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/actores",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"actores"
-							]
-						}
-					},
-					"response": []
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Leonardo DiCaprio\"\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/actores/1"
+					}
+				},
+				{
+					"name": "Eliminar Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/actores/1"
+					}
 				}
 			]
 		},
@@ -355,47 +230,54 @@
 			"name": "5. Salas",
 			"item": [
 				{
+					"name": "Listar Salas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/salas"
+					}
+				},
+				{
+					"name": "Obtener Sala (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/salas/1"
+					}
+				},
+				{
 					"name": "Crear Sala",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Sala 1 - IMAX\",\n    \"capacidad\": 200\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"nombre\": \"Sala IMAX\",\n  \"capacidad\": 200\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/salas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"salas"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/salas"
+					}
 				},
 				{
-					"name": "Listar Salas",
+					"name": "Actualizar Sala",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/salas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"salas"
-							]
-						}
-					},
-					"response": []
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Sala 3D\",\n  \"capacidad\": 150\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/salas/1"
+					}
+				},
+				{
+					"name": "Eliminar Sala",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/salas/1"
+					}
 				}
 			]
 		},
@@ -403,65 +285,54 @@
 			"name": "6. Películas",
 			"item": [
 				{
+					"name": "Listar Películas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/peliculas"
+					}
+				},
+				{
+					"name": "Obtener Película (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/peliculas/1"
+					}
+				},
+				{
 					"name": "Crear Película",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"titulo\": \"Inception\",\n    \"genero\": \"Sci-Fi\",\n    \"duracion\": 148,\n    \"directorId\": 1,\n    \"actorIds\": [1]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"titulo\": \"Inception\",\n  \"duracion\": 148,\n  \"edadMinima\": 12,\n  \"directorId\": 1,\n  \"actorIds\": [1]\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/peliculas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"peliculas"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/peliculas"
+					}
 				},
 				{
-					"name": "Listar Películas",
+					"name": "Actualizar Película",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/peliculas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"peliculas"
-							]
-						}
-					},
-					"response": []
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"titulo\": \"Inception (Remastered)\",\n  \"duracion\": 150,\n  \"edadMinima\": 16,\n  \"directorId\": 1,\n  \"actorIds\": [1]\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/peliculas/1"
+					}
 				},
 				{
-					"name": "Obtener Película por ID",
+					"name": "Eliminar Película",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/peliculas/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"peliculas",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/peliculas/1"
+					}
 				}
 			]
 		},
@@ -469,47 +340,54 @@
 			"name": "7. Funciones",
 			"item": [
 				{
+					"name": "Listar Funciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/funciones"
+					}
+				},
+				{
+					"name": "Obtener Función (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/funciones/1"
+					}
+				},
+				{
 					"name": "Crear Función",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"fechaHora\": \"2026-05-20T18:30:00\",\n    \"precio\": 9.50,\n    \"peliculaId\": 1,\n    \"salaId\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"fechaHora\": \"2026-10-20T18:00:00\",\n  \"precio\": 9.50,\n  \"peliculaId\": 1,\n  \"salaId\": 1\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/funciones",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"funciones"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/funciones"
+					}
 				},
 				{
-					"name": "Listar Funciones",
+					"name": "Actualizar Función",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/funciones",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"funciones"
-							]
-						}
-					},
-					"response": []
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fechaHora\": \"2026-10-20T22:00:00\",\n  \"precio\": 12.00,\n  \"peliculaId\": 1,\n  \"salaId\": 1\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/funciones/1"
+					}
+				},
+				{
+					"name": "Eliminar Función",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/funciones/1"
+					}
 				}
 			]
 		},
@@ -517,65 +395,54 @@
 			"name": "8. Ventas",
 			"item": [
 				{
-					"name": "Crear Venta (Compra)",
+					"name": "Listar Ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/ventas"
+					}
+				},
+				{
+					"name": "Obtener Venta (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/ventas/1"
+					}
+				},
+				{
+					"name": "Crear Venta",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"usuarioId\": 1,\n    \"entradas\": [\n        {\n            \"funcionId\": 1,\n            \"fila\": 5,\n            \"asiento\": 10\n        },\n        {\n            \"funcionId\": 1,\n            \"fila\": 5,\n            \"asiento\": 11\n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"usuarioId\": 1,\n  \"entradas\": [\n    {\n      \"funcionId\": 1,\n      \"fila\": 5,\n      \"asiento\": 10\n    }\n  ]\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/ventas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"ventas"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/ventas"
+					}
 				},
 				{
-					"name": "Listar Ventas",
+					"name": "Actualizar Venta",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/ventas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"ventas"
-							]
-						}
-					},
-					"response": []
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"usuarioId\": 1,\n  \"entradas\": [\n    {\n      \"funcionId\": 1,\n      \"fila\": 6,\n      \"asiento\": 12\n    }\n  ]\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/ventas/1"
+					}
 				},
 				{
-					"name": "Ver Venta (Recibo)",
+					"name": "Eliminar Venta",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/ventas/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"ventas",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/ventas/1"
+					}
 				}
 			]
 		},
@@ -583,66 +450,54 @@
 			"name": "9. Entradas",
 			"item": [
 				{
-					"name": "Listar Todas las Entradas",
+					"name": "Listar Entradas",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/entradas",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"entradas"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/entradas"
+					}
 				},
 				{
-					"name": "Actualizar Entrada (Cambio asiento)",
+					"name": "Obtener Entrada (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/entradas/1"
+					}
+				},
+				{
+					"name": "Crear Entrada (Suelta)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"funcionId\": 1,\n  \"fila\": 1,\n  \"asiento\": 1\n}",
+							"options": { "raw": { "language": "json" } }
+						},
+						"url": "{{base_url}}/entradas"
+					}
+				},
+				{
+					"name": "Actualizar Entrada",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"funcionId\": 1,\n    \"fila\": 8,\n    \"asiento\": 20\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"raw": "{\n  \"funcionId\": 1,\n  \"fila\": 2,\n  \"asiento\": 2\n}",
+							"options": { "raw": { "language": "json" } }
 						},
-						"url": {
-							"raw": "{{base_url}}/entradas/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"entradas",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/entradas/1"
+					}
 				},
 				{
 					"name": "Eliminar Entrada",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_url}}/entradas/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"entradas",
-								"1"
-							]
-						}
-					},
-					"response": []
+						"url": "{{base_url}}/entradas/1"
+					}
 				}
 			]
 		}
@@ -650,8 +505,7 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://localhost:8080/api",
-			"type": "string"
+			"value": "http://localhost:8083/api"
 		}
 	]
 }
